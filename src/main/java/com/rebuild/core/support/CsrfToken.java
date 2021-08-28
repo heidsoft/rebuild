@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author devezhao
  * @since 2020/12/15
+ * @see com.rebuild.api.user.AuthTokenManager
  */
 public class CsrfToken {
 
