@@ -116,22 +116,7 @@ See LICENSE and COMMERCIAL in the project root for license information.
   // for `cookie`
   $.cookie.defaults = { expires: 14, path: '/', secure: location.protocol === 'https:' }
 
-  // for `watermark`
-  if (window.watermark && self === top) {
-    window.watermark.init({
-      watermark_txt: [rb.currentUser, rb.appName],
-      watermark_angle: 30,
-      watermark_width: 200,
-      watermark_font: 'arial',
-      watermark_fontsize: '15px',
-      watermark_alpha: 0.06,
-      watermark_parent_width: $(window).width(),
-      watermark_parent_height: $(window).height(),
-      monitor: true,
-    })
-    if (!(location.protocol === 'http:' || location.protocol === 'https:')) location.href = 'https://getrebuild.com/'
-  }
-
+  // default locale
   rb.locale = rb.locale || 'zh_CN'
 
   // for `moment`

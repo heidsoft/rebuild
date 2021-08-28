@@ -9,6 +9,22 @@ See LICENSE and COMMERCIAL in the project root for license information.
 
 // PAGE INITIAL
 $(function () {
+  // for `watermark`
+  if (window.watermark && self === top && !(location.href.contains('/f/') || location.href.contains('/s/'))) {
+    window.watermark.init({
+      watermark_txt: [rb.currentUser, rb.appName],
+      watermark_angle: 30,
+      watermark_width: 200,
+      watermark_font: 'arial',
+      watermark_fontsize: '15px',
+      watermark_alpha: 0.06,
+      watermark_parent_width: $(window).width(),
+      watermark_parent_height: $(window).height(),
+      monitor: true,
+    })
+    if (!(location.protocol === 'http:' || location.protocol === 'https:')) location.href = 'https://getrebuild.com/'
+  }
+
   // scroller
   var $t = $('.rb-scroller')
   $t.perfectScrollbar()
